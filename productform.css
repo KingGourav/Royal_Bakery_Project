@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+/* fonts            */
+:root 
+{
+	--text:#777777;
+	--primary:#E2004F ;
+	--secondary:#232838;
+	--ternary:#6C6C6C;
+	--danger:#FE4545;
+	--pure:#FEFEFE;
+	--light:#F0F0F0;
+	--haven:#FFFFFF;
+	--footer:#20333F;
+	--shadow:0px 10px 30px rgba(118,85,225,0.3);
+	--box-shadow:0px 10px 30px rgba(57,56,61,0.205);
+	--gradient:linear-gradient(90deg,#4458dc 0%,#854fee 100%);
+}
+::selection{
+	background: var(--primary);
+}
+select:hover
+{
+	color: var(--primary) !important;
+}
+/* creating the main Container class for responsive designs */
+
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Lato', sans-serif;
+}
+body
+{
+	background: #f9f9f9;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+
+}
+.container
+{
+	
+	background: #fff;
+	box-shadow: var(--box-shadow);
+	
+}
+.container form
+{
+	display: flex;
+	flex-direction: column;
+}
+.container form .box
+{
+	display: flex;
+	justify-content: space-between;
+}
+.container form .box .left
+{
+	width: 60%;
+	padding: 1rem;
+}
+.container form .box .left div
+{
+	display: flex;
+	flex-direction: column;
+	margin: 1rem;
+}
+.container form .box .left div input
+{
+	margin-top: 1rem;
+	border: none;
+	outline: none;
+	border-bottom: 1px solid var(--text);
+	color: var(--primary);
+}
+.container form .box .right
+{
+	width: 40%;
+	padding: 1rem;
+}
+.container form .box .right div
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.container form .box .right div img
+{
+	width: 10rem;
+	height: 10rem;
+	object-fit: cover;
+	
+}
+.container form .box .right div input
+{
+	margin-top: 2rem;
+
+	
+}
+.container form button.iu
+{
+	margin-top: 2rem;
+	outline: none;border: none;
+	padding: 0.5rem 0.5rem;
+	box-shadow: var(--shadow);
+	background: var(--primary);
+	color: #fff;
+	width: 10%;
+	margin-bottom: 2rem;
+}
+a
+{
+	text-align: center;
+	text-decoration: none;
+	margin-top: 2rem;
+	color: var(--text);
+}
+
+@media(max-width: 780px)
+{
+.container form .box
+{
+	flex-direction: column;
+}
+.container form .box .left
+{
+	width: 100%;
+}
+.container form .box .right
+{
+	width: 100%;
+	
+
+}
+.container form .box .right div
+{
+	align-items: left;
+}
+}

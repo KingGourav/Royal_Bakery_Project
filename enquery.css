@@ -1,0 +1,282 @@
+@font-face 
+{
+	font-family: "Raleway-regular";
+	src:url(fonts/Raleway-regular.ttf);
+}
+@font-face 
+{
+	font-family: "Poppins-Bold";
+	src:url(fonts/Poppins-Regular.ttf);
+}
+@font-face 
+{
+	font-family: "Poppins-Bold1";
+	src:url(fonts/Poppins-Bold.ttf);
+}
+@font-face 
+{
+	font-family: "Raleway-medium";
+	src:url(fonts/Raleway-Medium.ttf);
+}
+@font-face 
+{
+	font-family: "Raleway-bold";
+	src:url(fonts/Raleway-Bold.ttf);
+}
+@font-face 
+{
+	font-family: "Raleway-semibold";
+	src:url(fonts/Raleway-semibold.ttf);
+}
+@font-face 
+{
+	font-family: "Raleway-black";
+	src:url(fonts/Raleway-Black.ttf);
+}
+@font-face 
+{
+	font-family: "Raleway-extrabold";
+	src:url(fonts/Raleway-ExtraBold.ttf);
+}
+/* creating a variable for colors */
+:root 
+{
+	--primary:#4458dc;
+	--light:#F0F0F0;
+	--secondry:#854fee;
+	--title:#141313;
+	--text:#777777;
+	--border:#201f1f17;
+	--gradient:linear-gradient(90deg,#4458dc 0%,#854fee 100%);
+	--shadow:0px 10px 30px rgba(118,85,225,0.3);
+	--box-shadow:0px 10px 30px rgba(57,56,61,0.205);
+}
+
+/* creating the main Container class for responsive designs */
+
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body,html
+{
+	-webkit-font-smoothing:antialiased;
+	font-family: "Raleway-regular";
+	width: 100%;
+	height: 100%;
+}
+
+.container
+{
+	width: 100%;
+	padding: 0 15px;  /* top,bottom=0px left,right=15px */
+	margin: 0 auto;
+
+}
+
+/* creating the size ratios for responsive each particualar devices */
+@media (min-width: 576px)
+{
+	.container
+	{
+		max-width: 540px;
+	}
+}
+@media (min-width: 768px)
+{
+	.container
+	{
+		max-width: 720px;
+	}
+}
+@media (min-width: 992px)
+{
+	.container
+	{
+		max-width: 960px;
+	}
+}
+@media (min-width: 1200px)
+{
+	.container
+	{
+		max-width: 1152px;
+	}
+}
+section
+{
+	
+	width: 100%;
+	height: 100vh;
+    background: url("background.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+
+   
+}
+section .container
+{
+	
+	padding-top: 4rem;
+	display: flex;
+	justify-content: space-between;
+}
+section .container .left
+{
+	width: 50%;
+	height: 100%;
+	
+	display: flex;
+	flex-direction: column;margin-bottom: 2rem;
+}
+section .container .left .heading
+{
+	display: flex;
+	flex-direction: column;
+	
+	width: 100%;
+	align-items: center;
+	
+	
+
+}
+section .container .left .heading h2
+{
+	text-align: center;
+	font-family: "Raleway-bold";
+	font-size: 1.7rem;
+	margin-bottom: 0.9rem;
+}
+section .container .left .heading p
+{
+	text-align: center;
+	font-family: "Raleway-semibold";
+	color: var(--text);
+	margin-top: 0.5rem;
+	font-size: 0.8rem;
+	letter-spacing: 1px;
+}
+
+ img
+{
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	margin-top: 2rem;
+}
+section .container .left .heading button
+{
+	background: transparent;
+	outline: none;
+	border: none;
+	color: var(--text);
+	padding: 0.8rem 0;
+	cursor: pointer;
+}
+
+section .container .left .f1
+{
+	display: flex;
+	margin-left: 1rem;
+
+}
+section .container .left .f1 input
+{
+	padding: 0.7rem;
+	margin: 1rem;
+	outline: none;
+	border: none;border-bottom: 1px solid var(--border);
+	background: transparent;
+}
+
+section .container .left input
+{
+	padding: 0.7rem;
+	margin: 1rem;
+	outline: none;
+	border: none;border-bottom: 1px solid var(--border);
+}
+form
+{
+	display: flex;
+	flex-direction: column;
+}
+
+section .container .left .box
+{
+	margin: 1rem 0;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+
+}
+section .container .left .box button
+{
+padding: 1rem 1rem;
+border: none;
+background-color: #fff;
+outline: none;
+color: #000;
+font-weight: bold;
+border-radius: 2px;
+box-shadow: var(--shadow);
+transition: all 0.3s ease;
+}
+section .container .left .box button:hover
+{
+	background: var(--secondry);
+	color: #fff;
+	box-shadow: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 900px)
+{
+
+	section
+	{
+		background-position:left;
+		padding-top: 5rem;
+	}
+	section .container
+	{
+		flex-direction: column;
+		/*border:1px solid red;*/
+	}
+	section .container .left
+	{
+		width: 100%;
+		/*border:1px solid red;*/
+		margin-left: 0;
+	}
+	section .container .left .f1 {
+		justify-content: space-between;
+	}
+	section .container .left .f1 input
+	{
+		width: 100%;
+	}
+}
+@media(max-width: 500px)
+{
+	section .container .left .f1 {
+		flex-direction: column;
+		margin: 0;
+	}
+}

@@ -1,0 +1,288 @@
+
+@font-face 
+{
+	font-family: "Raleway-regular";
+	src:url(fonts/Raleway-regular.ttf);
+}
+@font-face 
+{
+	font-family: "Poppins-Bold";
+	src:url(fonts/Poppins-Regular.ttf);
+}
+@font-face 
+{
+	font-family: "Poppins-Bold1";
+	src:url(fonts/Poppins-Bold.ttf);
+}
+@font-face 
+{
+	font-family: "Raleway-medium";
+	src:url(fonts/Raleway-Medium.ttf);
+}
+@font-face 
+{
+	font-family: "Raleway-bold";
+	src:url(fonts/Raleway-Bold.ttf);
+}
+@font-face 
+{
+	font-family: "Raleway-semibold";
+	src:url(fonts/Raleway-semibold.ttf);
+}
+@font-face 
+{
+	font-family: "Raleway-black";
+	src:url(fonts/Raleway-Black.ttf);
+}
+@font-face 
+{
+	font-family: "Raleway-extrabold";
+	src:url(fonts/Raleway-ExtraBold.ttf);
+}
+/* creating a variable for colors */
+:root 
+{
+	--primary:#4458dc;
+	--light:#F0F0F0;
+	--secondry:#854fee;
+	--title:#141313;
+	--text:#777777;
+	--border:#201f1f17;
+	--gradient:linear-gradient(90deg,#4458dc 0%,#854fee 100%);
+	--shadow:0px 10px 30px rgba(118,85,225,0.3);
+	--box-shadow:0px 10px 30px rgba(57,56,61,0.205);
+}
+
+/* creating the main Container class for responsive designs */
+
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body,html
+{
+	-webkit-font-smoothing:antialiased;
+	font-family: "Raleway-regular";
+	width: 100%;
+	height: 100%;
+}
+
+.container
+{
+	width: 100%;
+	padding: 0 15px;  /* top,bottom=0px left,right=15px */
+	margin: 0 auto;
+
+}
+
+/* creating the size ratios for responsive each particualar devices */
+@media (min-width: 576px)
+{
+	.container
+	{
+		max-width: 540px;
+	}
+}
+@media (min-width: 768px)
+{
+	.container
+	{
+		max-width: 720px;
+	}
+}
+@media (min-width: 992px)
+{
+	.container
+	{
+		max-width: 960px;
+	}
+}
+@media (min-width: 1200px)
+{
+	.container
+	{
+		max-width: 1152px;
+	}
+}
+body
+{
+	background: #FAFAFA;
+}
+.wrap
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: #fff;
+	padding: 1rem 0;
+	box-shadow: var(--shadow);
+}
+h1
+{
+	text-align: center;
+	font-family: "Raleway-bold";
+	color: var(--secondry);
+	text-transform: uppercase;
+	padding: 1rem 0;
+	font-size: 2.3rem;
+	text-shadow: var(--shadow);
+}
+h5
+{
+	color: var(--text);
+	font-family: "Raleway-regular";
+	font-size: 1rem;
+	padding: 0.1rem 0;
+	font-weight: bold;
+}
+.wrap span
+{
+	color: #000;
+	font-weight: bolder;
+}
+.container .one
+{
+	margin-top: 3rem;
+	background: #fff;
+	box-shadow: var(--box-shadow);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem;
+
+}
+.container .one h2
+{
+	font-family: "Raleway-Bold";
+	color: var(--secondry);
+	font-size: 1.2rem;
+	text-transform: uppercase;
+
+}
+.container .one h2 span
+{ color:green;
+	margin-left: 0.7rem;
+	font-weight: bold;
+}
+.container .one a
+{
+	text-decoration: none;
+	color: var(--primary);
+	font-weight: bold;
+	cursor: pointer;
+}
+.tab
+{
+	width: 100%;
+	height: 400px;
+	border: 1px solid var(--border);
+	margin:4rem 0;
+	overflow: auto;
+	white-space: nowrap;
+	padding: 2rem 1rem;
+	box-shadow: var(--shadow);
+}
+table img
+{
+	border-radius: 1rem;
+}
+::-webkit-scrollbar
+{
+	width: 12px;
+}
+::-webkit-scrollbar-thumb
+{
+	background: #fff;
+	border: 2px solid var(--border);
+	border-radius: 6px;
+}
+th
+{
+	font-family: "Raleway-bold";
+	font-size: 1rem;
+	text-transform: uppercase;
+
+}
+td a
+{
+	text-decoration: none;
+	color: #000;
+}
+
+table
+{
+	background: #fff;
+}
+tr
+{
+	
+}
+footer
+{
+	color: #000;
+	text-align: center;
+	padding: 0.3rem 0;
+	display: flex;align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+tbody,thead
+{
+	margin-right: 2rem;
+}
+tbody td
+{
+	
+	font-weight: bold;
+	color: var(--secondry);
+}
+i
+{
+	margin-right: -2px;
+}
+@media(max-width:600px)
+{
+	.container .one
+	{
+		flex-direction: column;
+		justify-content: center;
+
+	}
+	.container .one a
+	{
+		margin-top: 1rem;
+	}
+	.container .one i
+	{
+		margin-right: 5px;
+	}
+	.tab
+	{
+		height: 600px;
+	}
+	.wrap
+	{
+
+	}
+}
+@media(max-width:400px)
+{
+	.wrap
+	{
+		padding: 1rem;
+		text-align: center;
+	}
+	.container .one
+	{
+		text-align: center;
+	}
+	.tab
+	{
+		height: 400px;
+	}
+}
